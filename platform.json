@@ -1,18 +1,18 @@
 {
-  "name": "espressif32",
-  "title": "Espressif 32",
+  "name": "espressif32_stage",
+  "title": "Espressif 32 (Stage)",
   "description": "Espressif Systems is a privately held fabless semiconductor company. They provide wireless communications and Wi-Fi chips which are widely used in mobile devices and the Internet of Things applications.",
   "url": "https://espressif.com/",
   "homepage": "http://platformio.org/platforms/espressif32",
   "license": "Apache-2.0",
   "engines": {
-    "platformio": "^3.0.0"
+    "platformio": ">=3.3.0-a.7"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/platformio/platform-espressif32.git"
   },
-  "version": "0.5.0",
+  "version": "0.6.0-alpha.4",
   "packageRepositories": [
     "https://dl.bintray.com/platformio/dl-packages/manifest.json",
     "https://sourceforge.net/projects/platformio-storage/files/packages/manifest.json/download",
@@ -46,7 +46,7 @@
     "framework-arduinoespressif32": {
       "type": "framework",
       "optional": true,
-      "version": "~1.1.2"
+      "version": "https://github.com/espressif/arduino-esp32.git"
     },
     "framework-espidf": {
       "type": "framework",
