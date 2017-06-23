@@ -12,7 +12,7 @@
     "type": "git",
     "url": "https://github.com/platformio/platform-espressif32.git"
   },
-  "version": "0.8.0-alpha.1",
+  "version": "0.8.0-alpha.2",
   "packageRepositories": [
     "https://dl.bintray.com/platformio/dl-packages/manifest.json",
     "https://sourceforge.net/projects/platformio-storage/files/packages/manifest.json/download",
@@ -66,6 +66,11 @@
     "tool-esptoolpy": {
       "type": "uploader",
       "version": "~1.20000.0"
+    },
+    "tool-espotapy": {
+      "type": "uploader",
+      "optional": true,
+      "version": "~1.0.0"
     }
   }
 }
