@@ -32,6 +32,8 @@ from SCons.Script import DefaultEnvironment
 env = DefaultEnvironment()
 platform = env.PioPlatform()
 
+env.SConscript("_embedtxt_files.py", exports="env")
+
 FRAMEWORK_DIR = platform.get_package_dir("framework-espidf")
 assert FRAMEWORK_DIR and isdir(FRAMEWORK_DIR)
 
@@ -452,6 +454,13 @@ libs.append(env.BuildLibrary(
     join(FRAMEWORK_DIR, "components", "heap"),
     src_filter="+<*> -<test*> -<multi_heap_poisoning.c>"
 ))
+
+libs.append(env.BuildLibrary(
+    join("$BUILD_DIR", "aws_iot"),
+    join(FRAMEWORK_DIR, "components", "aws_iot"),
+    src_filter="-<*> +<port> +<aws-iot-device-sdk-embedded-C/src>"
+))
+
 
 envsafe = env.Clone()
 envsafe.Prepend(
