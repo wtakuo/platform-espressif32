@@ -343,7 +343,7 @@ else:
     is_new = False
     with open(join(env.subst("$PROJECTSRC_DIR"), "sdkconfig.h")) as fp:
         for l in fp.readlines():
-            if "CONFIG_ADC_CAL_LUT_ENABLE" in l:
+            if "CONFIG_AWS_IOT_SDK" in l:
                 is_new = True
                 break
 
