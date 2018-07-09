@@ -62,7 +62,7 @@ def embed_files(files):
     for f in files:
         filename = basename(f) + ".txt.o"
         file_target = env.TxtToBin(join("$BUILD_DIR", filename), f)
-        env.Depends("$BUILD_DIR/$PROGNAME$PROGSUFFIX", file_target)
+        env.Depends("$PIOMAINPROG", file_target)
         env.Append(PIOBUILDFILES=[env.File(join("$BUILD_DIR", filename))])
 
 
